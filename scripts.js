@@ -35,3 +35,8 @@ jQuery('.post .entry-title').addClass('better-entry-title')
 
 // Modify HTML attributes
 jQuery('.post:first').attr('id', 'the-first-post');
+
+// Events in Jquery
+jQuery(document).on('dblclick', '#masthead', function () {
+    jQuery('#masthead .site-description').text('You have found my double click easter egg!');
+});
