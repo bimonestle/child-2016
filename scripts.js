@@ -22,3 +22,13 @@ jQuery('#masthead .site-description').html( 'Read me on <a href="http://premium.
 // Add Content
 jQuery('#masthead .site-description').append(", I'm also on WPMU DEV");
 jQuery('#masthead .site-description').prepend("Hello! Please ");
+
+// Modifying properties and style elements
+jQuery('.post .entry-title a').css({
+    background: '#000000',
+    color: '#ffffff',
+    padding: '11px',
+    borderBottom: '5px solid #F8E71C'
+})
+
+jQuery('.post .entry-title').addClass('better-entry-title')
