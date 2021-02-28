@@ -40,3 +40,10 @@ jQuery('.post:first').attr('id', 'the-first-post');
 jQuery(document).on('dblclick', '#masthead', function () {
     jQuery('#masthead .site-description').text('You have found my double click easter egg!');
 });
+
+// Toggle a widget
+jQuery('.widget').prepend('<span class="toggle-widget">toggle</span>');
+jQuery(document).on('click', '.toggle-widget', function () {
+    console.log(this);
+    jQuery(this).parent().find('*').not('.toggle-widget .widget-title').toggle();
+});
