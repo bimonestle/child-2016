@@ -16,5 +16,9 @@ jQuery('aside').children().find('h2').css({ background: 'brown' });
 jQuery('aside').children().has('.widget-title').css({ background: 'cadetblue' });
 
 // Modifying Content
-jQuery('#masthead .site-description').html( 'Read me on <a href="http://premium.wpmudev.org/blog/author/danielpataki">WPMU DEV</a> as well' );
 jQuery('#masthead .site-description').text( 'Read me on <a href="http://premium.wpmudev.org/blog/author/danielpataki">WPMU DEV</a> as well' );
+jQuery('#masthead .site-description').html( 'Read me on <a href="http://premium.wpmudev.org/blog/author/danielpataki">WPMU DEV</a> as well' );
+
+// Add Content
+jQuery('#masthead .site-description').append(", I'm also on WPMU DEV");
+jQuery('#masthead .site-description').prepend("Hello! Please ");
