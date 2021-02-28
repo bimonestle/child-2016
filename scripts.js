@@ -32,3 +32,6 @@ jQuery('.post .entry-title a').css({
 })
 
 jQuery('.post .entry-title').addClass('better-entry-title')
+
+// Modify HTML attributes
+jQuery('.post:first').attr('id', 'the-first-post');
