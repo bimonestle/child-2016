@@ -1,0 +1,1 @@
+jQuery('#masthead').css({background: 'red'});
