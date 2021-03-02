@@ -47,3 +47,9 @@ jQuery(document).on('click', '.toggle-widget', function () {
     console.log(this);
     jQuery(this).parent().find('*').not('.toggle-widget .widget-title').toggle();
 });
+
+(function ($) {
+    $(document).on('click', '.love-button img', function () {
+        alert('Love is being given');
+    })
+})(jQuery);
