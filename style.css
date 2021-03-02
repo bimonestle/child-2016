@@ -5,3 +5,13 @@ Author: Bimo
 Template: twentysixteen
 Version: 1.0.0
 */
+
+.love-button img {
+    margin-right: 6px;
+    opacity: .7;
+    cursor: pointer;
+}
+
+.love-button img:hover {
+    opacity: 1;
+}
