@@ -49,7 +49,11 @@ jQuery(document).on('click', '.toggle-widget', function () {
 });
 
 (function ($) {
+    // $(document).on('click', '.love-button img', function () {
+    //     alert('Love is being given');
+    // })
     $(document).on('click', '.love-button img', function () {
-        alert('Love is being given');
+        var post_id = parseInt($(this).parents('article.post:first').attr('id').replace('post-',''));
+        console.log(post_id);
     })
 })(jQuery);
