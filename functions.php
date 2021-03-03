@@ -46,3 +46,9 @@ function twentysixteen_entry_meta() {
         echo '<span class="love-button"> <img width="28" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSI0MHB4IiBpZD0iTGF5ZXJfMSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDAgNDA7IiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA0MCA0MCIgd2lkdGg9IjQwcHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxwYXRoIGQ9Ik0xOS45NzkwMDAxLDkuMTk1MzAwMSAgQzI1LjYzOTIwMDItMS44ODY3LDM4LjUxMTY5OTcsMy4zOTU5OTk5LDM3Ljk0OTE5OTcsMTMuMzAyN0MzNy4zNjM4LDIzLjYxNjE5OTUsMjIuODc0NTAwMywyNy4xNzM3OTk1LDE5Ljk3OTAwMDEsMzQuOTgxODk5MyAgQzE3LjA4MzAwMDIsMjYuOTc5MDAwMSwyLjc4OTU5OTksMjMuODExNTAwNSwyLjAwODMwMDEsMTMuMzAyN0MxLjI3MzksMy40MDc3MDAxLDE0LjkzNTk5OTktMS45MzEyLDE5Ljk3OTAwMDEsOS4xOTUzMDAxeiIgc3R5bGU9ImZpbGwtcnVsZTpldmVub2RkO2NsaXAtcnVsZTpldmVub2RkO2ZpbGw6I0ZGNTk0RjsiLz48L3N2Zz4="><span class="number">' . $love . '</span></span>';
     }
 }
+
+// The result of this will be an object named ajaxTest ,
+// which will contain the array given in the final parameter as properties.
+// To grab the value of ajax_url we can use ajaxTest.ajax_url in our JavaScript.
+
+wp_localize_script('ajax-test-scripts', 'ajaxTest', array('ajax_url' => admin_url('admin_ajax.php')));
