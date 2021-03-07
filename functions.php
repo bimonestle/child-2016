@@ -4,6 +4,11 @@ function twentysixteen_child_assets() {
     wp_enqueue_style('parent-style', get_template_directory_uri().'/style.css');
     wp_enqueue_style('child-style', get_stylesheet_directory_uri().'/style.css');
     wp_enqueue_script('script', get_stylesheet_directory_uri().'/scripts.js', array('jquery'), '1.0.0', true);
+
+    // The result of this will be an object named ajaxTest ,
+    // which will contain the array given in the final parameter as properties.
+    // To grab the value of ajax_url we can use ajaxTest.ajax_url in our JavaScript.
+    wp_localize_script('script', 'ajaxTest', array('ajax_url' => admin_url('admin-ajax.php')));
 }
 function twentysixteen_entry_meta() {
     if ( 'post' === get_post_type() ) {
@@ -47,8 +52,9 @@ function twentysixteen_entry_meta() {
     }
 }
 
-// The result of this will be an object named ajaxTest ,
-// which will contain the array given in the final parameter as properties.
-// To grab the value of ajax_url we can use ajaxTest.ajax_url in our JavaScript.
-
-wp_localize_script('ajax-test-scripts', 'ajaxTest', array('ajax_url' => admin_url('admin_ajax.php')));
+add_action('wp_ajax_add_love', 'ajax_test_add_love');
+add_action('wp_ajax_nopriv_add_love', 'ajax_test_add_love');
+function ajax_test_add_love() {
+    echo 4;
+    die();
+}
