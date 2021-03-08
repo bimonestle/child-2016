@@ -54,7 +54,7 @@ jQuery(document).on('click', '.toggle-widget', function () {
     // })
     $(document).on('click', '.love-button img', function () {
         var post_id = parseInt($(this).parents('article.post:first').attr('class').replace('post-','')[0]);
-        // console.log(post_id);
+        var $number = $(this).parent().find('.number');
 
         $.ajax({
             url: ajaxTest.ajax_url,
@@ -64,7 +64,8 @@ jQuery(document).on('click', '.toggle-widget', function () {
                 post_id: post_id
             },
             success: function (response) {
-                alert("Success, the new count is " + response);
+                // alert("Success, the new count is " + response);
+                $number.text(response);
             }
         })
     })
