@@ -55,6 +55,11 @@ function twentysixteen_entry_meta() {
 add_action('wp_ajax_add_love', 'ajax_test_add_love');
 add_action('wp_ajax_nopriv_add_love', 'ajax_test_add_love');
 function ajax_test_add_love() {
-    echo 4;
+    $love = get_post_meta($_POST['post_id'], 'show_some_love', true);
+    $love = (empty($love)) ? 0 : $love;
+    $love++;
+
+    update_post_meta($_POST['post_id'], 'show_some_love', $love);
+    echo $love;
     die();
 }
